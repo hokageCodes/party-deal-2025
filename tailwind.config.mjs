@@ -1,17 +1,19 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+export const content = [
+  "./src/**/*.{js,ts,jsx,tsx}", // Adjust to your folder structure
+];
+export const theme = {
+  extend: {
+    colors: {
+      charcoal: "#1C1C1E",
+      yellow: "#FFAF00",
+      red: "#FE0000",
+    },
+    fontFamily: {
+      coolvetica: ['Coolvetica Rg', 'sans-serif'],
+      satoshi: ['Satoshi Variable', 'sans-serif'],
+      sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
     },
   },
-  plugins: [],
 };
+export const plugins = [];
