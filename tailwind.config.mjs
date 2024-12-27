@@ -14,6 +14,16 @@ export const theme = {
       satoshi: ['Satoshi Variable', 'sans-serif'],
       sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
     },
+    letterSpacing: {
+      tight: '-0.05em',
+      normal: '0em',
+      wide: '0.05em',
+    },
+    lineHeight: {
+      normal: '1.5',
+      relaxed: '1.625',
+      snug: '1.375',
+    },
   },
 };
 export const plugins = [];

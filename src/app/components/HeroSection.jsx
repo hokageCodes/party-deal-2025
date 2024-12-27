@@ -34,7 +34,7 @@ export default function HeroSection() {
         </h1>
         <p
           id="hero-paragraph"
-          className="text-gray-600 text-base md:text-lg lg:text-xl max-w-lg"
+          className="font-satoshi text-gray-600 text-base md:text-lg lg:text-xl max-w-lg"
         >
           Unique, full catering services in Nigeria. Lorem ipsum dolor sit amet
           consectetur adipisicing elit. Necessitatibus, atque?
