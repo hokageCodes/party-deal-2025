@@ -38,9 +38,9 @@ export default function Footer() {
         {/* Brand Info */}
         <div>
           <Link href="/" aria-label="Navigate to Home Page">
-            <div className="relative w-64 mb-16 h-16 mx-auto mb-4">
+            <div className="relative w-48 mb-16 h-16 mx-auto mb-4">
               <img
-                src="/assets/img/Logo-1.png"
+                src="/assets/img/logo-uno.png"
                 alt="Logo"
                 className="object-contain"
               />

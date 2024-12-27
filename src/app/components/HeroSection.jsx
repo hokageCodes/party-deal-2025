@@ -21,7 +21,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="bg-[#fafafa] font-coolvetica relative flex flex-col lg:flex-row items-center justify-center gap-8 p-8 lg:p-16 h-screen mt-12">
+    <section className="bg-[#fafafa] font-coolvetica relative flex flex-col lg:flex-row items-center justify-center gap-8 p-8 lg:p-16 h-screen mt-16">
       {/* Left Side */}
       <div className="flex flex-col items-center lg:items-start gap-6 text-center lg:text-left max-w-4xl z-10 mt-12 lg:mt-0">
         <h1
@@ -36,8 +36,7 @@ export default function HeroSection() {
           id="hero-paragraph"
           className="font-satoshi text-gray-600 text-base md:text-lg lg:text-xl max-w-lg"
         >
-          Unique, full catering services in Nigeria. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Necessitatibus, atque?
+          Whether it's a wedding, corporate event, or even a corporate party in Nigeria, we specialize in providing tailored catering services that will delight your guests.
         </p>
         <div
           id="hero-buttons"

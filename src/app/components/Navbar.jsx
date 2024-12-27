@@ -20,8 +20,9 @@ export default function Navbar() {
   }, []);
 
   // Dynamic classes
-  const bgColor = isScrolled ? "bg-charcoal" : "bg-white";
-  const textColor = isScrolled ? "text-yellow" : "text-charcoal";
+  const bgColor = isScrolled ? "bg-[#f9f9f9]" : "bg-[#f9f9f9]";
+  const textColor = isScrolled ? "text-charcoal" : "text-charcoal";
+  const activeTextColor = "text-red";
   const navHeight = "h-[12vh]";
 
   const navLinks = ["Home", "Services", "Menu", "Contact"];
@@ -31,14 +32,14 @@ export default function Navbar() {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`bg-[#fafafa] fixed top-0 left-0 w-full ${bgColor} ${textColor} ${navHeight} shadow-sm z-50`}
+      className={`bg-[#fafafa] fixed top-0 left-0 w-full ${bgColor} ${navHeight} shadow-sm z-50`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 md:px-8">
         {/* Logo */}
         <Link href="/" aria-label="Navigate to Home Page" className="z-50">
           <div className="relative w-48 h-24 ml-[-30px]">
             <Image
-              src="/assets/img/Logo-1.png"
+              src={isScrolled ? "/assets/img/Logo-1.png" : "/assets/img/Logo-1.png"}  // Change logo based on scroll
               alt="Logo"
               fill
               className="object-contain"
@@ -54,10 +55,10 @@ export default function Navbar() {
               <li key={item} className="relative">
                 <Link
                   href={`/${item.toLowerCase()}`}
-                  className={`transition-all duration-500 ease-in-out ${
+                  className={`transition-all duration-500 ease-in-out ${textColor} ${
                     isActive
-                      ? "text-red"
-                      : "text-charcoal hover:text-red"
+                      ? `${activeTextColor} underline`
+                      : "hover:text-red hover:underline"
                   }`}
                   aria-label={`Navigate to ${item} Page`}
                 >
@@ -97,10 +98,10 @@ export default function Navbar() {
                     key={item}
                     href={`/${item.toLowerCase()}`}
                     onClick={() => setIsOpen(false)}
-                    className={`text-6xl transition-all duration-500 ease-in-out ${
+                    className={`text-6xl transition-all duration-500 ease-in-out ${textColor} ${
                       isActive
-                        ? "text-red"
-                        : "text-charcoal hover:text-red"
+                        ? `${activeTextColor} underline`
+                        : "hover:text-red hover:underline"
                     }`}
                     aria-label={`Navigate to ${item} Page`}
                   >

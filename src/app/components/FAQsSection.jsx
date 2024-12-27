@@ -1,13 +1,13 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
 const FAQs = [
-  { question: "What is Neo-Brutalism?", answer: "Neo-Brutalism is a modern web design trend featuring bold colors, thick borders, and a minimalist yet attention-grabbing aesthetic." },
-  { question: "Why use Neo-Brutalism?", answer: "It’s perfect for creating standout designs that grab attention while maintaining simplicity and usability." },
-  { question: "How does Framer Motion help?", answer: "Framer Motion simplifies animations, allowing smooth, performant effects like collapsible answers and fade-ins." },
-  { question: "What is GSAP best for?", answer: "GSAP excels at creating complex animations, like hover scaling, with precise control and timing." },
-  { question: "Why use Tailwind CSS?", answer: "Tailwind CSS speeds up styling with utility classes, ensuring consistent and responsive designs." },
+  { question: "What catering services do you offer?", answer: "We provide a range of catering services, including buffet-style, plated dinners, cocktail parties, and custom menu options to suit your event needs." },
+  { question: "Do you accommodate dietary restrictions?", answer: "Absolutely! We can cater to vegetarian, vegan, gluten-free, and other dietary needs. Let us know your requirements during consultation." },
+  { question: "What is the booking process?", answer: "Simply contact us to discuss your event details. We'll create a custom quote, and upon approval, we'll secure your date with a deposit." },
+  { question: "How far in advance should I book?", answer: "We recommend booking at least 3-6 months in advance for larger events, but feel free to reach out for last-minute availability." },
+  { question: "Do you provide event staff?", answer: "Yes, we can provide experienced chefs, servers, and bartenders to ensure your event runs smoothly." },
 ];
 
 export default function FAQSection() {
@@ -31,9 +31,8 @@ export default function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="text-lg leading-relaxed font-satoshi">
-            Curious about Neo-Brutalism or our implementation techniques? 
-            Find answers to the most common questions below, or get in touch if 
-            you have more!
+            Planning an event? Here are some common questions about our catering services. 
+            If you need more information, don’t hesitate to get in touch!
           </p>
         </motion.div>
 
@@ -42,7 +41,7 @@ export default function FAQSection() {
           {FAQs.map((faq, index) => (
             <motion.div
               key={index}
-              className="border-4 border-charcoal bg-yellow p-6 rounded-xl cursor-pointer hover:bg-red hover:text-charcoal transition-all duration-300"
+              className="border-4 border-charcoal bg-yellow p-6 rounded-xl cursor-pointer hover:bg-charcoal hover:text-[#f9f9f9] transition-all duration-300"
               onClick={() => toggleFAQ(index)}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -56,7 +55,7 @@ export default function FAQSection() {
               </div>
 
               <motion.p
-                className={`mt-4 overflow-hidden text-base leading-relaxed font-satoshi ${
+                className={`mt-4 overflow-hidden text-base leading-relaxed font-satoshi hover:text-[#f9f9f9] ${
                   activeIndex === index ? "block" : "hidden"
                 }`}
                 initial={{ height: 0 }}
