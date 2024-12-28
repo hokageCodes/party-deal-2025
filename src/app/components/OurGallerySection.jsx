@@ -2,14 +2,14 @@
 import { motion } from "framer-motion";
 
 const galleryItems = [
-  { id: 1, src: "/images/food1.jpg", alt: "Delicious Pasta Dish" },
-  { id: 2, src: "/images/food2.jpg", alt: "Event Table Setup" },
-  { id: 3, src: "/images/food3.jpg", alt: "Gourmet Dessert" },
-  { id: 4, src: "/images/event1.jpg", alt: "Wedding Event Layout" },
-  { id: 5, src: "/images/event2.jpg", alt: "Birthday Party Decorations" },
-  { id: 6, src: "/images/food4.jpg", alt: "Grilled Steak Platter" },
-  { id: 7, src: "/images/food5.jpg", alt: "Colorful Appetizer Spread" },
-  { id: 8, src: "/images/event3.jpg", alt: "Corporate Event Ambiance" },
+  { id: 1, src: "/assets/img/party4.jpg", alt: "Delicious Pasta Dish" },
+  { id: 2, src: "/assets/img/party1.jpg", alt: "Event Table Setup" },
+  { id: 3, src: "/assets/img/party4.jpg", alt: "Gourmet Dessert" },
+  { id: 4, src: "/assets/img/party2.jpg", alt: "Wedding Event Layout" },
+  { id: 5, src: "/assets/img/party1.jpg", alt: "Birthday Party Decorations" },
+  { id: 6, src: "/assets/img/party3.jpg", alt: "Grilled Steak Platter" },
+  { id: 7, src: "/assets/img/party5.jpg", alt: "Colorful Appetizer Spread" },
+  { id: 8, src: "/assets/img/corp.jpg", alt: "Corporate Event Ambiance" },
 ];
 
 export default function OurGallery() {
@@ -18,15 +18,15 @@ export default function OurGallery() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-12"
+          className="text-left mb-12"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-5xl tracking-wide capitalize border-b-8 border-charcoal inline-block pb-2">
+          <h2 className="text-5xl tracking-wide capitalize inline-block pb-2">
             Our Gallery
           </h2>
-          <p className="mt-4 text-lg font-satoshi leading-relaxed">
+          <p className="mt-4 text-lg font-satoshi leading-relaxed max-w-[600px]">
             Feast your eyes on our culinary creations and beautifully organized events. 
             Bold flavors, bold designs, bold experiences!
           </p>

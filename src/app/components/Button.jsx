@@ -14,16 +14,16 @@ export default function Button({
 }) {
   // Dynamic classes
     const baseStyles =
-        "flex items-center justify-center font-semibold rounded transition-all duration-300 ease-in-out";
+        "flex items-center justify-center font-semibold transition-all duration-300 ease-in-out tracking-wide";
     const variantStyles = {
-        primary: "bg-yellow text-charcoal hover:bg-yellow-600",
-        secondary: "bg-charcoal text-white hover:bg-charcoal-600",
-        outline: "border-2 border-yellow text-charcoal hover:bg-yellow-100",
+        primary: "bg-yellow text-charcoal border-2 border-yellow hover:bg-yellow-600",
+        secondary: "bg-charcoal text-white border-2 border-charcoal hover:bg-charcoal-600",
+        outline: "bg-transparent text-charcoal border-2 border-yellow hover:bg-yellow-100",
     };
     const sizeStyles = {
-        small: "px-4 py-2 text-sm rounded",
-        medium: "px-6 py-3 text-md",
-        large: "px-8 py-4 text-xl rounded-full tracking-wide",
+        small: "px-6 py-3 text-md",
+        medium: "px-8 py-4 text-lg",
+        large: "px-10 py-5 text-xl",
     };
 
     return (
@@ -32,9 +32,9 @@ export default function Button({
             whileTap={{ scale: !disabled && 0.95 }}
             onClick={onClick}
             disabled={disabled || loading}
-            className={`${baseStyles} ${variantStyles[variant]} ${
-                sizeStyles[size]
-            }     ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
+            className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${
+                disabled ? "opacity-50 cursor-not-allowed" : ""
+            } rounded-none border-solid`}
             aria-label={label}
         >
             {/* Loading Spinner */}

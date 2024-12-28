@@ -89,7 +89,7 @@ export default function ContactSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-5xl tracking-wide capitalize border-l-8 border-charcoal pl-4 font-coolvetica">
+          <h2 className="text-5xl tracking-wide capitalize font-coolvetica">
             Get In Touch
           </h2>
           <p className="text-lg leading-relaxed font-satoshi">
