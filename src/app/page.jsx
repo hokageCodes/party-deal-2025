@@ -15,7 +15,6 @@ export default function Home() {
       <OurGallery />
       <MenuSection />
       <ContactSection />
-      {/* <ClientLogos /> */}
     </>
   );
 }
